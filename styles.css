@@ -159,7 +159,7 @@ ul li::before {
   body {
     padding: 0rem;
     margin: 0;
-    background-color: #f9f9f9; /* Light background for mobile */
+    background: white;/* Light background for mobile */
   }
 
   .container {
