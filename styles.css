@@ -179,7 +179,8 @@ ul li::before {
     flex: 1;
     margin-top: 0;
     text-align: left;
-    padding: 20px; /* Center-align text for mobile */
+    padding: 20px;
+    padding-bottom: 0; /* Center-align text for mobile */
   }
 
   .text-content h1 {
