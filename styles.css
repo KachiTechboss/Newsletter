@@ -180,7 +180,7 @@ ul li::before {
     margin-top: 0;
     text-align: left;
     padding: 20px;
-    padding-bottom: 0; /* Center-align text for mobile */
+  /* Center-align text for mobile */
   }
 
   .text-content h1 {
