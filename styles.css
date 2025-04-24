@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background: #1f2633;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    max-width: 900px;
+    width: 100%;
+  }
+  .card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+  
+  .text-content {
+    flex: 1;
+    /* line-height: 2; */
+    margin-top: 4rem;
+  }
+  
+  .text-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+
+  }
+  
+ul{
+    margin-top: 2rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+    list-style: none; /* Remove default bullet points */
+    position: relative;
+    padding-left: 2rem; /* Add space for the image */
+    line-height: 2;
+    font-weight: bold;
+    /* margin-top: 3rem; */
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.2rem; /* Adjust to align with text */
+    width: 1rem; /* Adjust size */
+    height: 1rem; /* Adjust size */
+    background-image: url('assets/images/icon-list.svg'); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  form {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  input[type="email"] {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+  }
+  
+  button {
+    padding: 1rem;
+    background: #222c44;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #ff6a5b, #fcae3e);
+  }
+  
+  .image-content {
+    flex: 1;
+    background: linear-gradient(135deg, #ff6a5b, #fcae3e);
+    border-radius: 15px;
+  }
+  .label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  input.error-border::placeholder {
+    color: #d9534f; /* Bootstrap-style red */
+  }
+  .error-border {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+    color: red;
+  }
+  #thank-you-card {
+    opacity: 0; /* Start invisible */
+    transform: scale(0.5); /* Start smaller */
+    animation: fadeInScale 0.5s ease-out forwards; /* Apply animation */
+  }
+  
+  /* Define the animation */
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.5); /* Start from the center and smaller */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1); /* End at full size */
+    }
+  }
+
+  .center {
+    text-align: left;
+  }
+  .btn{
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .checkmark {
+    font-size: 3rem;
+    color: #f87171;
+  }
+  .image-content-mobile {
+    display: none; /* Hide the image content on mobile */
+  }
+  /* Mobile Responsive Design */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    padding: 0rem;
+    background-color: white;
+    height: 115vh;
+  }
+
+  .container {
+    max-width: 100%;
+    width: 100%;
+  }
+  ::placeholder{
+    font-size: 0.7rem;
+  }
+
+  .card {
+    flex-direction: column-reverse; /* Stack content vertically */
+    padding: 0;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .text-content {
+  
+    padding: 20px;
+    text-align: left; /* Center-align text for mobile */
+  }
+
+
+  .text-content h1 {
+    font-size: 1.4rem; /* Adjust heading size */
+    margin-top: 15rem;
+  }
+  .image-content {
+    display: none; /* Hide the image content on mobile */
+  }
+  .image-content-mobile {
+    display: block; /* Show the image content on mobile */
+    height: 100px; /* Adjust image height for mobile */
+    background-size: cover; 
+    width: 300px;/* Ensure the image scales properly */
+    border-radius: 10px;
+  }
+  .mobile-image{
+    width: 482px;
+    /* height: 100%; */
+    border-radius: 10px;
+  }
+
+  ul li {
+    font-size: 0.9rem; /* Adjust list item font size */
+    padding-left: 1.5rem; /* Adjust padding for list items */
+  }
+
+  ul li::before {
+    width: 0.8rem; /* Adjust size of the checkmark icon */
+    height: 0.8rem;
+    top: 0.1rem; /* Adjust alignment */
+  }
+
+  .image-content {
+    height: 200px; /* Adjust image height */
+    /* background-size: cover; */
+    border-radius: 10px;
+    width: 100%; /* Ensure the image scales properly */
+  }
+
+  input[type="email"] {
+    padding: 0.8rem;
+    font-size: 0.7rem; /* Adjust input font size */
+  }
+
+  button {
+    padding: 0.8rem;
+    font-size: 0.7rem;
+    width: 100%;
+  }
+
+  .btn {
+    margin-top: 1.5rem;
+  }
+  #thank-you-card {
+    width: 90%; 
+    max-width: 300px; 
+    padding: 1.5rem; 
+    margin: 0 auto; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    opacity: 0;
+    transform: scale(0.5);
+    animation: fadeInScale 0.5s ease-out forwards;
+  }
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+  }
+
+  #thank-you-card h1 {
+    font-size: 1.5rem; 
+    margin-top: 0;/* Reduce heading size */
+  }
+
+  #thank-you-card p {
+    font-size: 0.9rem; /* Reduce paragraph font size */
+  }
+
+  #thank-you-card .btn {
+    padding: 0.8rem;
+    font-size: 1rem; /* Adjust button font size */
+  }
+}
+@media (max-width: 425px) {
+  .mobile-image{
+    width: 425px;
+    /* height: 100%; */
+    border-radius: 10px;
+  }
+  .text-content {
+    
+    padding: 20px;
+    text-align: left; /* Center-align text for mobile */
+  }
+
+  .text-content h1 {
+    font-size: 1.3rem; 
+    margin-top: 10rem;/* Adjust heading size */
+  }
+}
+@media (max-width: 375px) {
+  .mobile-image{
+    width: 375px;
+    /* height: 100%; */
+    border-radius: 10px;
+  }
+  .text-content {
+   
+    padding: 20px;
+    text-align: left; /* Center-align text for mobile */
+  }
+
+  .text-content h1 {
+    font-size: 1.3rem;
+    margin-top: 8rem; /* Adjust heading size */
+  }
+}
+@media (max-width: 320px) {
+  .mobile-image{
+    width: 320px;
+    /* height: 100%; */
+    border-radius: 10px;
+  } .text-content {
+    margin-top: 0rem;
+    padding: 20px;
+    text-align: left; /* Center-align text for mobile */
+  }
+}
